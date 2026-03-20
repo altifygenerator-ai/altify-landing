@@ -113,18 +113,18 @@ body {
 }
 
 .hero-image {
-  flex: 1;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .profile {
-  border-radius: 16px;
-  max-width: 380px;
   width: 100%;
+  max-width: 300px; /* smaller */
   height: auto;
+  border-radius: 16px;
   object-fit: cover;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
 }
 
 .large {
