@@ -43,20 +43,22 @@ export default function Home() {
 
             <button
               className="btn btn-secondary"
-              onClick={() => (window.location.href = "tel:+1234567890")}
+              onClick={() => (window.location.href = "tel:8702604880")}
             >
               Call Now
             </button>
           </div>
         </div>
 
-        <Image
-          src="/profile.jpg"
-          width={400}
-          height={500}
-          alt="Profile"
-          className="profile"
-        />
+        <div className="hero-image">
+          <Image
+            src="/profile.jpg"
+            width={400}
+            height={500}
+            alt="Profile"
+            className="profile"
+          />
+        </div>
       </section>
 
       {/* PROBLEM */}
@@ -115,7 +117,14 @@ export default function Home() {
               AI-powered tool that turns messy text into clean, structured, publish-ready content.
               Built with real API integration and backend logic.
             </p>
-            <button className="btn btn-primary">View Tool</button>
+
+            <a
+              href="https://altify-cleantext-api.vercel.app/"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <button className="btn btn-primary">Try the Tool</button>
+            </a>
           </div>
         </div>
       </section>
