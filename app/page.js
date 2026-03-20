@@ -22,35 +22,39 @@ export default function Home() {
 
       {/* HERO */}
       <section className="hero">
-        <div className="hero-text">
-          <h1>Get More Customers From Google</h1>
-          <p>
-            Simple websites for local businesses that help people find you and call you.
-          </p>
-          <div className="btn-group">
-            <button 
-  className="btn btn-primary"
-  onClick={() => {
-    document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
-  }}
->
-  Get Free Preview
-</button>
-           <button 
-  className="btn btn-secondary"
-  onClick={() => window.location.href = "tel:+1234567890"}
->
-  Call Now
-</button>
+  <div className="hero-text">
+    <h1>Get More Customers From Google</h1>
+    <p>
+      Simple websites for local businesses that help people find you and call you.
+    </p>
 
-<Image
-  src="/profile.jpg"
-  width={400}
-  height={500}
-  alt="Profile"
-  className="profile"
-/>
-      </section>
+    <div className="btn-group">
+      <button
+        className="btn btn-primary"
+        onClick={() => {
+          document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+        }}
+      >
+        Get Free Preview
+      </button>
+
+      <button
+        className="btn btn-secondary"
+        onClick={() => window.location.href = "tel:+1234567890"}
+      >
+        Call Now
+      </button>
+    </div>
+  </div>
+
+  <Image
+    src="/profile.jpg"
+    width={400}
+    height={500}
+    alt="Profile"
+    className="profile"
+  />
+</section>
 
       {/* PROBLEM */}
       <section className="section">
@@ -142,11 +146,41 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-     <section className="section cta" id="contact">
-        <h2>Want to see what your website could look like?</h2>
-        <button className="btn btn-primary large">Get Your Free Preview</button>
-      </section>
+   <section className="section cta" id="contact">
+  <h2>Get Your Free Website Preview</h2>
 
-    </main>
-  );
-}
+  <form
+    className="contact-form"
+    onSubmit={async (e) => {
+      e.preventDefault();
+
+      const formData = new FormData(e.target);
+
+      const data = {
+        name: formData.get("name"),
+        phone: formData.get("phone"),
+        message: formData.get("message"),
+      };
+
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        body: JSON.stringify(data),
+      });
+
+      if (res.ok) {
+        alert("Request sent. I’ll contact you soon.");
+        e.target.reset();
+      } else {
+        alert("Something went wrong.");
+      }
+    }}
+  >
+    <input name="name" placeholder="Your Name" required />
+    <input name="phone" placeholder="Phone Number" required />
+    <textarea name="message" placeholder="What do you need?" />
+
+    <button className="btn btn-primary large" type="submit">
+      Get Free Preview
+    </button>
+  </form>
+</section>
