@@ -1,3 +1,5 @@
+import "./globals.css";
+
 export const metadata = {
   title: "Altify",
   description: "Get More Customers From Google"
