@@ -10,7 +10,14 @@ export default function Home() {
           <Image src="/logo.png" width={32} height={32} alt="Altify logo" />
           Altify
         </div>
-        <button className="btn btn-primary">Get Free Preview</button>
+        <button 
+  className="btn btn-primary"
+  onClick={() => {
+    document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+  }}
+>
+  Get Free Preview
+</button>
       </div>
 
       {/* HERO */}
@@ -21,18 +28,28 @@ export default function Home() {
             Simple websites for local businesses that help people find you and call you.
           </p>
           <div className="btn-group">
-            <button className="btn btn-primary">Get Free Preview</button>
-            <button className="btn btn-secondary">Call Now</button>
-          </div>
-        </div>
+            <button 
+  className="btn btn-primary"
+  onClick={() => {
+    document.getElementById("contact").scrollIntoView({ behavior: "smooth" });
+  }}
+>
+  Get Free Preview
+</button>
+           <button 
+  className="btn btn-secondary"
+  onClick={() => window.location.href = "tel:+1234567890"}
+>
+  Call Now
+</button>
 
-        <Image
-          src="/profile.jpg"
-          width={400}
-          height={400}
-          alt="Profile"
-          className="profile"
-        />
+<Image
+  src="/profile.jpg"
+  width={400}
+  height={500}
+  alt="Profile"
+  className="profile"
+/>
       </section>
 
       {/* PROBLEM */}
@@ -125,7 +142,7 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="section cta">
+     <section className="section cta" id="contact">
         <h2>Want to see what your website could look like?</h2>
         <button className="btn btn-primary large">Get Your Free Preview</button>
       </section>
