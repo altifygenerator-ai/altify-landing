@@ -1,0 +1,108 @@
+body {
+  font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+  background: #f9fafb;
+  margin: 0;
+  color: #111;
+}
+
+.container {
+  max-width: 1100px;
+  margin: auto;
+  padding: 2rem;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  display: flex;
+  gap: 0.5rem;
+  font-weight: 600;
+}
+
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 3rem;
+  gap: 2rem;
+}
+
+.hero-text h1 {
+  font-size: 2.5rem;
+}
+
+.muted {
+  color: #6b7280;
+}
+
+.section {
+  margin-top: 4rem;
+}
+
+.grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.grid-2 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+}
+
+.card {
+  background: white;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+}
+
+.btn {
+  padding: 0.7rem 1.2rem;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+}
+
+.btn-group {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.btn-primary {
+  background: linear-gradient(to right, #2563eb, #22c55e);
+  color: white;
+}
+
+.btn-secondary {
+  background: white;
+  border: 1px solid #ccc;
+}
+
+.profile {
+  border-radius: 16px;
+}
+
+.project-img {
+  border-radius: 12px;
+}
+
+.pricing {
+  text-align: center;
+}
+
+.cta {
+  text-align: center;
+}
+
+.large {
+  padding: 1rem 2rem;
+  font-size: 1.1rem;
+}
