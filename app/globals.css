@@ -101,6 +101,31 @@ body {
 .cta {
   text-align: center;
 }
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.profile {
+  border-radius: 16px;
+  max-width: 380px;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+}
 
 .large {
   padding: 1rem 2rem;
